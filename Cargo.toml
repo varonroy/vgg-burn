@@ -1,0 +1,17 @@
+[package]
+name = "vgg-burn"
+version = "0.1.0"
+edition = "2021"
+authors = ["varonroy <varonroy@gmail.com>"]
+
+[features]
+pretrained = ["burn/network", "dep:dirs"]
+
+[dependencies]
+burn = { git = "https://github.com/tracel-ai/burn" }
+burn-import = { git = "https://github.com/tracel-ai/burn" }
+dirs = { version = "5.0.1", optional = true }
+
+[dev-dependencies]
+burn = { git = "https://github.com/tracel-ai/burn", features = ["ndarray"]}
+image = "0.25.1"
